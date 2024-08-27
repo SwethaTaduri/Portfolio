@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <link rel="icon" href="images/stfav.png">
+        <title> ST Professional Portfolio </title>
+        
+        <meta charset = "UTF-8">
+        <meta name = "Description" content = "My Portfolio">
+        <meta name = "Author" content = "Swetha Taduri">
+        <meta http-equiv="refresh" content ="5">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<base href="https://www.stgvas.com/" target="_blank">-->
+
+        <style>
+            body { margin:0; }
+            .navbar {
+                background-color: #bbbabd;
+                display: flex;
+                justify-content: flex-end;
+                position:fixed;
+                width:100%;
+                top:0px;
+                height:60px;
+            }
+            .navbar a{
+                display:block;
+                padding: 16px 14px;
+                color: white;
+                text-decoration:none;
+                font-size: 18px;
+                font-weight: bold;
+
+            }
+            .navbar a:hover:not(.active) {
+                background-color: hsl(194, 97%, 37%); 
+            }
+            .active {
+               background-color: hsl(194, 97%, 37%);
+            }
+            
+            .intro {
+                background-image: url("images/bbg.jpg");
+                color: #020274;
+                padding:55px 30px 100px 30px;
+                position:relative;
+                margin-top:60px;
+            }
+        
+            .intro h1 {
+                font-size: 70px;
+                margin-bottom:20px;
+            }
+            .intro h4 {
+                font-size: 20px;
+                margin-top:0;
+            }
+            .intro > img {
+                position: absolute;
+                max-width:35%;
+                top: 120px;
+                right:40px;
+            }
+            .intro input {
+                width:300px;
+                background-color: hsl(194, 97%, 37%);
+                color:white;
+                padding: 15px;
+                margin-top:15px;
+                font-size: 20px;
+                border-radius: 10px;
+            }
+            .logos {
+                margin: 55px 0px;
+            }
+            .logos a {
+                padding:15px;
+            }
+            .about {
+             margin-top:15px;
+             padding: 25px;
+             background-image: url("images/bg1.jpg");
+            }
+            .about h3 {
+                font-size:25px;
+                color:black;
+            }
+            .about p {
+                font-size: 18px;
+                color: gray;
+                text-indent: 20px;
+                letter-spacing: 1px;
+                word-spacing: 3px;
+                line-height: 1.2;
+                white-space:wrap;
+                text-align: justify;
+            }
+            .edu {
+                display:flex;
+                align-items:center;
+                justify-content: flex-start;
+                font-size:15px;
+                letter-spacing: 1px;
+                word-spacing: 3px;
+                line-height: 1.2;
+                white-space:wrap;
+                color: gray;
+            }
+            .edu img {
+                margin-right: 10px;
+            }
+            .tools {
+             margin-top:15px;
+             padding: 25px;
+             background-image: url("images/bg1.jpg");
+            }
+            .tools h3 {
+                font-size:25px;
+                color:black; 
+            }
+            .toolsul {
+                list-style-type:none;
+                display:flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-content: space-between;
+                align-items: center;
+            }
+            .toolsul li {
+                background-color: beige;
+                padding: 10px;
+                margin: 35px;
+                width:150px;
+                border-radius: 10px;
+                display:flex;
+                align-items:center;
+                text-align : center;
+                justify-content: flex-start;
+            }
+            .toolsul img{
+                margin-right:15px;
+                width:45px;
+                height:auto;
+            }
+            .projectsub {
+                display:flex;
+                flex-flow: row wrap;
+                justify-content:space-between;
+                align-items:center;
+            }
+            .work {
+                margin-top:15px;
+                padding: 35px 35px 35px 35px;
+                background-image: url("images/bg1.jpg"); 
+            }
+            .work h3 {
+                font-size:25px;
+                color:black;
+                margin-bottom: 30px;
+            }
+            .worksub {
+                background-color: #f5aa48;
+                padding: 15px;
+                border-radius: 10px;
+                margin:15px;
+            }
+            .projects {
+                margin-top:15px;
+                padding: 35px 35px 35px 35px;
+                background-image: url("images/bg1.jpg");
+            }
+            .projects h3 {
+                font-size:25px;
+                color:black;
+                margin-bottom: 50px;
+            }
+            .projects div {
+                text-align: justify;
+                background-color: #f59f58;
+                margin-top: 0px 15px 15px 15px;
+                padding:40px 20px;
+                border-radius:10px;
+                width:300px;
+                display:flex;
+                justify-content: space-between;
+                flex-flow: column wrap;
+                align-items:center;
+            }
+            .projects h4 {
+                text-align:center;
+                margin-bottom:0px;
+            }
+            .projects img {
+                text-align:center;
+            }
+            .contact {
+                margin-top:15px;
+                padding: 25px;
+                background-image: url("images/bg1.jpg"); 
+            }
+            .contact h4{
+                color: #020274;
+                margin-bottom:10px;
+                font-size:20px;
+            }
+            .contact h3 {
+                margin-bottom: 0px;
+                color: black;
+                font-size:25px;
+            }
+            input[type=text] {
+              width: 50%;
+              padding: 12px 20px;
+              margin: 20px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+              
+            }
+            input[type=submit] {
+                width:50%;
+                background-color: hsl(194, 97%, 37%);
+                border-radius: 10px;
+                padding:15px;
+                font-size:15px;
+                color:white;
+                margin:20px;
+            }
+        </style>
+    </head>
+     
+      
+    <body>
+                <section class="navbar">
+                     <a class="active" href="#section0"> Home  </a> 
+                     <a href="#section1"> About    </a> 
+                     <a href="#section2"> Tools    </a> 
+                     <a href="#section3"> Projects </a> 
+                     <a href="#section4"> Contact  </a> 
+                </section>
+
+        <section class="intro" id="section0">
+
+            <h1>Hi, I am Swetha <br> Front End Developer</h1>
+            <p> I am a Front-end Developer. I am currently looking for jobs in this field.I am a Front-end Developer. I am currently looking for jobs in this field. </p>
+            <img src="images/gcoder.png" alt="girlcoder" style="width:100%">
+
+            <div class="logos">
+                <a href="https://www.linkedin.com/in/swetha-taduri/" target="_blank"> <img src="images/linkedin.png"> </a>
+                <a href="mailto:swetha.taduri4@gmail.com" target="_blank"> <img src="images/gmail.png"> </a>
+                <a href="tel:+15627139785" target="_blank"> <img src="images/contact.png"> </a>
+                <a href="https://www.instagram.com/swetha_taduri/" target="_blank"> <img src="images/insta.png"> </a>
+            </div>
+           
+            <input type="button" value="Resume">
+            
+        </section>
+
+        <section class="about" id="section1">
+
+            <h3> ABOUT ME</h3>
+            <p>
+            I pursued my Master's degree in Computer Science, with coursework focusing on cutting-edge technologies and problem-solving. Additionally, I actively worked as a Supplemental Instructor, assisting and supporting undergraduate students in their academic journey. This position allowed me to apply my knowledge, refine my communication and teaching skills, and make a positive impact on the learning experiences of my peers.
+
+            During my tenure at Thirdware Solutions as a Software Engineer, I had the privilege of working with a diverse range of clients and contributing to various projects.
+            One of my best projects was the Password Reset Tool: I worked as a Frontend Developer, playing a crucial role in designing and implementing the intuitive user interface , enhancing user autonomy while prioritizing security. The tool incorporated two-factor authentication (2FA) and rigorous security measures.
+            I had the opportunity to be a part of a project where we were tasked with developing two new interfaces for one of our clients, Laird.
+            Our team designed and built the CPR and IBDX interfaces, ensuring it met the specific requirements and expectations of the client. This included implementing features for data management and exchange, analysis, and reporting .
+            </p>
+
+            <h3> EDUCATION </h3>
+                
+                <div class="edu">
+                    <img src="images/csudh.png">
+                    <div> <span style="color:black"><strong>California State University-Dominguez Hills</strong></span><br>
+                     Master's degree, Computer Science<br>
+                     Aug 2022
+                    </div>
+                </div>
+                <br>
+                <div class="edu">
+                    <img src="images/mgit.png">
+                    <div><span style="color: black"><strong> Mahatma Gandhi Institute of Technology </strong></span><br>
+                    Bachelor's Degree in Electrical and Electronics Engineering<br>
+                    2017-2021
+                    </div>
+                </div>
+
+        </section>
+
+        <section class="tools" id="section2">
+            <h3> TECHNOLOGIES AND TOOLS</h3>
+
+            <ul class="toolsul">
+                <li> <img src="images/html.png" alt="html logo">  HTML </li>
+                <li> <img src="images/css.png" alt="css logo"> <p> CSS </p></li>
+                <li> <img src="images/js.png" alt="JS logo"> <p> Javascript </p></li>
+                <li> <img src="images/react.png" alt="react logo">  React </li>
+                <li> <img src="images/mysql.png" alt="mysql logo"> <p> MySQL </p></li>
+                <li> <img src="images/git.png" alt="git logo"> <p> Git </p></li>
+                <li> <img src="images/putty.png" alt="jira logo">  JIRA </li>
+                <li> <img src="images/erp.png" alt="erp logo"> <p> ERP </p></li>
+                <li> <img src="images/python.png" alt="Python logo"> <p> Python </p></li>
+                <li> <img src="images/java.png" alt="JAVA logo">  JAVA </li>
+                <li> <img src="images/c.png" alt="C logo"> <p> C Language</p></li>
+                <li> <img src="images/vsc.png" alt="VSC logo"> <p> VSC </p></li>
+               
+            </ul>
+        </section>
+        
+        <section class="work">
+            <h3> WORK EXPERIENCE </h3>
+            <div class="worksub">
+                <h4> Company: Thirdware Solutions<br>
+                     April 2022 - August 2022
+                </h4>
+                <h4>    
+                    Client: TE Connectivity <br>
+                    Role: Frontend Developer <br>
+                </h4> 
+                <p> 
+                    I developed and implemented a user-friendly QAD password reset tool web page using HTML, CSS, and JavaScript, integrating CGI for server-side processing and a 2FA mechanism with OTP for enhanced security. The tool features a responsive design for various devices and underwent thorough testing to ensure a high-quality frontend experience.
+                </p>
+              
+            </div>
+            <div class="worksub">
+                <h4> Company: Thirdware Solutions<br>
+                     Aug 2021 - April 2022
+               </h4>
+               <h4> 
+                     Client: Laird,Watts<br>
+                     Role:Software Developer<br>
+               </h4>
+               <p> 
+                Led the development of critical CPR and IBDX interfaces to optimize data transfer between regions, utilizing SFTP for secure file transmissions and automating daily batch jobs. Created and customized maintenance menus and managed secure file transfers and processing, including error handling. Maintained comprehensive documentation and logging mechanisms for tracking status and errors.
+                </p>
+            </div>
+        </section>
+        <section class="projects" id="section3">
+            <h3> PROJECTS </h3>
+            <section class="projectsub">
+            <div>
+                <img src="images/pro1.png" alt="project1" >
+                <h4> Project 1 </h4>
+                <p> Developed a with-index model using LangChain and OpenAI-LLaMA for querying of TCGA pathology reports, incorporating RAG for enhanced responses. Built a chatbot for interactive querying evaluated the performance of indexed versus non-indexed approaches in extracting cancer biomarkers and therapeutic targets using cosine similarity. Tools used include Google Colab, Python, Pinecone and NLP techniques. </p>
+            </div>
+            <div>
+                <img src="images/pro2.png" alt="project2" >
+                <h4> Project 2 </h4>
+                <p> Developed and designed a responsive restaurant web page using HTML, CSS, and JavaScript, ensuring compatibility across various devices. Integrated dynamic features such as online reservations and interactive menus. Enhanced user experience through intuitive navigation and visually appealing layouts. Conducted usability testing and implemented feedback to optimize performance and user satisfaction. </p>
+            </div>
+            <div>
+                <img src="images/pro3.png" alt="project3" >
+                <h4> Project 3 </h4>
+                <p>Conducted a data science project on email spam detection using machine learning techniques. Preprocessed and analyzed large datasets to identify spam patterns, achieving high accuracy in classification. Implemented and optimized algorithms such as Naive Bayes and Support Vector Machines. Presented findings and developed a comprehensive report to demonstrate the effectiveness of the detection model. </p>
+            </div>
+            </section>
+        </section>
+
+        <section class="contact" id="section4">
+            <h3> CONTACT </h3>
+            <h4> Connect with me!</h4>
+            <p style="font-size:16px"> Hey, I would love to hear from you guys, let's connect <br>  </p>
+            <form> 
+                <label style="font-weight:bold">Full Name</label><br>
+                <input type="text" placeholder="Your name"> <br>
+                <label style="font-weight:bold">Email</label><br>
+                <input type="text" placeholder="Your email"> <br>
+                <label style="font-weight:bold">Message</label><br>
+                <input type="text" placeholder="Enter your message.."  style="height:80px"> <br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </body>
+</html>
